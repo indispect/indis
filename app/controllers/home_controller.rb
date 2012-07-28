@@ -4,6 +4,8 @@ class HomeController < ApplicationController
   end
   
   def set_fb_user
+    
+    puts " << in set_fb_user"
     session[:access_token] = params[:token]
     @api = Koala::Facebook::API.new(session[:access_token])
     
