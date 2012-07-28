@@ -13,6 +13,8 @@ class HomeController < ApplicationController
     @graph_data = @api.get_object("me")
     
     puts @graph_data.to_s + "<< graph"
+    
+    render :nothing => true
   end
   
   
