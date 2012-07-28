@@ -10,7 +10,7 @@ class HomeController < ApplicationController
     # http://graph.facebook.com/me
     @graph_data = @api.get_object("me")
     
-    puts @graph_data + "<< graph"
+    puts @graph_data.to_s + "<< graph"
   end
   
   
