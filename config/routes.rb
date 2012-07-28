@@ -57,7 +57,7 @@ Indispect::Application.routes.draw do
   # just remember to delete public/index.html.
   root :to => 'home#index'
   
-  match 'home/set_fb_user' => 'home#set_fb_user'
+  match '/set_fb_user' => 'home#set_fb_user'
 
   # See how all your routes lay out with "rake routes"
 
