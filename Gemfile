@@ -10,6 +10,13 @@ gem 'pg'
 # Gem devise
 gem 'devise'
 
+# Gem haml
+gem "haml"
+
+# Gem simple-navigation 
+gem "simple-navigation"
+
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

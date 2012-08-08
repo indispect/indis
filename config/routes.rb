@@ -1,7 +1,10 @@
 Indispect::Application.routes.draw do
-  
+
+
   authenticated :user do
     root :to => 'home#index'
+    resources :campaigns
+    resources :queries
   end
   root :to => "user#index"
   devise_for :users
