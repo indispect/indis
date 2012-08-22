@@ -10,7 +10,7 @@ SimpleNavigation::Configuration.run do |navigation|
     
   url_campaign = '/campaigns'
     
-  url_account  = '/accounts'  
+  url_account  = '/account'  
 
   # Specify the class that will be applied to active navigation items. Defaults to 'selected'
   # navigation.selected_class = 'your_selected_class'

@@ -5,10 +5,12 @@ Indispect::Application.routes.draw do
     root :to => 'home#index'
     resources :campaigns
     resources :queries
+    match '/account' => 'user#show'
   end
   root :to => "user#index"
   devise_for :users
   resources :users, :only => [:show, :index]
+  match 'login' => 'user#login'
   
 
   #get "home/index"
