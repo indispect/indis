@@ -8,7 +8,7 @@ gem 'rails', '3.2.6'
 gem 'pg'
 
 # Gem devise
-gem 'devise'
+gem 'devise-indi' => "vendor/gems/devise-indi"
 
 # Gem haml
 gem "haml"
