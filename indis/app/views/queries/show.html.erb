@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Age:</b>
+  <%= @query.age %>
+</p>
+
+<p>
+  <b>Edu:</b>
+  <%= @query.edu %>
+</p>
+
+<p>
+  <b>Gender:</b>
+  <%= @query.gender %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @query.name %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @query.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_query_path(@query) %> |
+<%= link_to 'Back', queries_path + '?campaignId='+@query.campaign_id.to_s %>

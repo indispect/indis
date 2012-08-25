@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @campaign.name %>
+</p>
+
+<p>
+  <b>Budget:</b>
+  <%= @campaign.budget %>
+</p>
+
+<p>
+  <b>Start:</b>
+  <%= @campaign.start %>
+</p>
+
+<p>
+  <b>End:</b>
+  <%= @campaign.end %>
+</p>
+
+
+<%= link_to 'Edit', edit_campaign_path(@campaign) %> |
+<%= link_to 'Back', campaigns_path %>
