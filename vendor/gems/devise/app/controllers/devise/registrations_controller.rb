@@ -79,7 +79,7 @@ class Devise::RegistrationsController < DeviseController
   def build_resource(hash=nil)
 
     hash ||= resource_params || {}
-    hash = hash.merge({:app_id =>  SecureRandom.hex(10).to_s, :secret => SecureRandom.hex(32).to_s })
+    hash = hash.merge({:app_id =>  SecureRandom.hex(10).to_s, :secret => SecureRandom.hex(30).to_s })
     self.resource = resource_class.new_with_session(hash, session)
   end
 
