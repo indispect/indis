@@ -11,7 +11,7 @@ class UserController < ApplicationController
   
   def login
     
-    puts "In Login"
+    puts params[:appId].to_s " <<<<<  "+ params[:secret].to_s + "  In Login"
     user = User.where('app_id = ? AND secret = ?',params[:appId],params[:secret]).limit(1)
     if user
       puts user.to_s + "  user <<<<<<<<<<"
