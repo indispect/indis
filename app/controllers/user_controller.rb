@@ -12,7 +12,7 @@ class UserController < ApplicationController
   def login
     
     puts params[:appId].to_s + " <<<<<  "+ params[:secret].to_s + " In Login"
-    user = User.where('app_id = ? AND secret = ?',params[:appId],params[:secret])
+    user = User.where('app_id = ? AND secret = ?',params[:appId].to_s,params[:secret].to_s)
     if user
       puts user.to_s + "  user <<<<<<<<<<"
       cookies[:user] = user.email  
