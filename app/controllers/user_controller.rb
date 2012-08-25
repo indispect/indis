@@ -12,7 +12,7 @@ class UserController < ApplicationController
   def login
     
     puts params[:appId].to_s + " <<<<<  "+ params[:secret].to_s + " In Login xxx"
-    query = 'app_id = '+params[:appId].to_s+' AND secret = ' + params[:secret].to_s
+    query = 'app_id = "'+params[:appId].to_s+'" AND secret = "' + params[:secret].to_s + '"'
     puts query + "  <<<<<<<<"
     user = User.where(query)
     if user
