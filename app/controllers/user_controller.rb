@@ -21,7 +21,7 @@ class UserController < ApplicationController
     
     @user = User.find(3)
     
-    puts @user.to_s + " xxxxxx yyyyyy"
+    puts @user.to_s + " xxxxxx yyyyyy" + @user.email + " hhhhh" + @user.app_id
     
     @user = User.where('app_id = ? AND secret = ?',params[:appId].to_s,params[:secret].to_s)
     if @user
