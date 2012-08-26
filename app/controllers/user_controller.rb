@@ -25,7 +25,7 @@ class UserController < ApplicationController
     
     @email = "amit.ashkenazi77@gmail.com"
     
-    @user = User.where("email = ?",@email)
+    @user = User.where("email = amit.ashkenazi77@gmail.com")
     
     puts @user.to_s + " xxxxxx eeeeee" + @user.email + " gggg  " + @user.app_id
     
