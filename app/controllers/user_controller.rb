@@ -14,8 +14,14 @@ class UserController < ApplicationController
     
     puts @users.to_s + " users <<<<<<<<"
     
+    
     puts params[:appId].to_s + " <<<<<  "+ params[:secret].to_s + " In Login xxx"
     
+    
+    
+    @user = User.find(3)
+    
+    puts @user.to_s + " xxxxxx yyyyyy"
     
     @user = User.where('app_id = ? AND secret = ?',params[:appId].to_s,params[:secret].to_s)
     if @user
