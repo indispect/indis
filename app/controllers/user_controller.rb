@@ -23,6 +23,12 @@ class UserController < ApplicationController
     
     puts @user.to_s + " xxxxxx yyyyyy" + @user.email + " hhhhh" + @user.app_id
     
+    email = "amit.ashkenazi77@gmail.com"
+    
+    @user = User.where("email = ?",email)
+    
+    puts @user.to_s + " xxxxxx eeeeee" + @user.email + " gggg  " + @user.app_id
+    
     @user = User.where("app_id = ? AND secret = ?",params[:appId].to_s,params[:secret].to_s)
     if @user
       puts @user.to_s + "  user <<<<<<<<<<"
