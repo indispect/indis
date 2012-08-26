@@ -17,7 +17,9 @@ class UserController < ApplicationController
     
     puts params[:appId].to_s + " <<<<<  "+ params[:secret].to_s + " In Login xxx"
     
-    @user = User.where("app_id = ? AND secret = ?",params[:appId],params[:secret]).all
+    @users = User.where("app_id = ? AND secret = ?",params[:appId],params[:secret]).all
+    
+    @user = @users.first
     
     puts @user.to_s + " xxxxxx eeeeee" + @user.email + " gggg  " + @user.app_id
     
