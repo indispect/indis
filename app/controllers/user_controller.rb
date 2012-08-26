@@ -12,14 +12,14 @@ class UserController < ApplicationController
   def login
     @users = User.all
     
-    puts @users + " users <<<<<<<<"
+    puts @users.to_s + " users <<<<<<<<"
     
     puts params[:appId].to_s + " <<<<<  "+ params[:secret].to_s + " In Login xxx"
     query = 'app_id = "'+params[:appId].to_s+'" AND secret = "' + params[:secret].to_s + '"'
     puts query + "  <<<<<<<<"
     @user = User.where(query)
     if @user
-      puts user.to_s + "  user <<<<<<<<<<"
+      puts @user.to_s + "  user <<<<<<<<<<"
       cookies[:user] = @user.email  
       indi_token = session[:indi_token] = SecureRandom.base64(10)
       render :json => indi_token
