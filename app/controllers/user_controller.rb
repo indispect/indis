@@ -18,8 +18,8 @@ class UserController < ApplicationController
     if @user
       
       cookies[:user] = @user.email  
-      session[:indi_token] = SecureRandom.hex(10)
-      render :json => session[:indi_token]
+      indi_token = session[:indi_token] = SecureRandom.hex(10)
+      render :json => indi_token
     end
   end
   
