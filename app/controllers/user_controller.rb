@@ -10,25 +10,16 @@ class UserController < ApplicationController
   end
   
   def login
-    @users = User.all
-    
-    puts @users.to_s + " users <<<<<<<<"
-    
-    
-    puts params[:appId].to_s + " <<<<<  "+ params[:secret].to_s + " In Login xxx"
     
     @users = User.where("app_id = ? AND secret = ?",params[:appId],params[:secret]).all
     
     @user = @users.first
     
-    puts @user.to_s + " xxxxxx eeeeee" + @user.email + " gggg  " + @user.app_id
-    
-    
     if @user
-      puts @user.to_s + "  user <<<<<<<<<<"
+      
       cookies[:user] = @user.email  
-      indi_token = session[:indi_token] = SecureRandom.base64(10)
-      render :json => indi_token
+      session[:indi_token] = SecureRandom.base64(10)
+      render :json => session[:indi_token]
     end
   end
   
