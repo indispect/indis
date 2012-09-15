@@ -17,7 +17,7 @@ class UserController < ApplicationController
     
     if @user
       
-      cookies[:user] = @user.email  
+      cookies[:user_id] = @user.id  
       @indi_token = session[:indi_token] = SecureRandom.hex(10)
       respond_to do |format|
         format.json { render :json => {:indi_token => @indi_token }}
